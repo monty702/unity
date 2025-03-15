@@ -1,0 +1,19 @@
+.home-page {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .social-icons {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    gap: 15px;
+  }
+  h1,
+  h2,
+  h3 {
+    color: #333;
+  }

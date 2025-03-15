@@ -1,0 +1,98 @@
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .icons {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-icon {
+    margin-right: 10%;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff; /* White for menu icon */
+  }
+  
+  @media (max-width: 768px) {
+    header{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar {
+        align-items: center;
+        justify-content: space-between;
+    }
+  
+    .logo {
+      text-align: left;
+      margin-left: 10%; /* Add spacing from the left */
+    }
+  
+    .menu-icon {
+      text-align: right;
+      margin-right: 10%; /* Add spacing from the right */
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 10vh;
+      height: auto;
+      right: 0;
+      background-color: #81c784; /* Light green for mobile menu */
+      padding: 20px;
+      flex-direction: column;
+      text-align: left;
+      z-index: 1000;
+      
+    }
+
+    .nav-links.open {
+      display: flex;
+      animation: fadeIn 1s ease-in-out;
+    }
+  }
+  
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

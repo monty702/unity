@@ -1,0 +1,220 @@
+/* Modal Background */
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* Login/Register Form Container */
+.login-form {
+  width: 300px;
+  max-width: 90%;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Register Form Styling */
+.register-form {
+  background-color: #f9f9f9; /* Slightly different background for registration */
+  border: 1px solid #4CAF50; /* Add a border for distinction */
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+  position: relative;
+  /* margin-bottom: px; */
+}
+
+.input-container input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.input-container input:focus {
+  border-color: #1b390a;
+  box-shadow: 0 0 6px rgba(255, 127, 80, 0.3);
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -1px;
+  left: 10px;
+  font-size: 13px;
+  color: #4CAF50;
+}
+
+/* Password Input with Visibility Toggle */
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container span {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.password-container span:hover {
+  color: #4CAF50;
+}
+
+/* Buttons */
+.login-form button {
+  
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+  background-color: #4CAF50;
+}
+
+.forgot-password button {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  cursor: pointer;
+  text-align: right;
+  font-size: 14px;
+  outline: none;
+}
+
+.forgot-password button:hover {
+  text-decoration: underline;
+}
+
+/* Link Text */
+.login-form p {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.login-form p span {
+  color: #4CAF50;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form p span:hover {
+  text-decoration: underline;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  color: #4CAF50;
+}
+
+/* Temporary Password Update Form */
+.password-update-form {
+  width: 400px;
+  max-width: 90%;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.password-update-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .login-form,
+  .password-update-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-form h2,
+  .password-update-form h2 {
+    font-size: 22px;
+  }
+
+
+  .login-form button,
+  .password-update-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
