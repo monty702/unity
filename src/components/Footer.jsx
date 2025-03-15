@@ -2,7 +2,7 @@ import "./Footer.css"
 const Footer = () => {
     return (
       <footer>
-        <p>&copy; 2025 Unity Connect. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Unity Connect. All rights reserved.</p>
       </footer>
     );
   };
